@@ -18,25 +18,25 @@ void sortedSquares(int nums [], int size, int new_nums[]) {
         if (-1 * nums[neg] <= nums[pos]) {
             square = nums[neg] * nums[neg];
             new_nums[count] = square;
-            --neg;
+            ++neg;
         }
         else {
             square = nums[pos] * nums[pos];
             new_nums[count] = square;
-            ++pos;
+            --pos;
         }
     }
 
     while (neg >= 0) {
         square = nums[neg] * nums[neg];
         new_nums[count] = square;
-        --neg;
+        ++neg;
     }
 
     while (pos <= size) {
         square = nums[pos] * nums[pos];
         new_nums[count] = square;
-        ++pos;
+        --pos;
     }
 
 }
